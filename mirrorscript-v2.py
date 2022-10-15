@@ -2,7 +2,7 @@
 # Mirrorscript v2 By Hazmirul Afiq
 import subprocess, requests, re, sys
 import operator
-import argparse, apt, os
+import argparse, os
 import threading
 from shutil import copyfile
 
@@ -127,6 +127,7 @@ if __name__ == "__main__":
 	print("# https://www.metahackers.pro/speed-kali-linux-update/")
 	print("#\n")
 
+	"""
 	if https:
 		cache = apt.Cache()
 		cache.open()
@@ -152,6 +153,7 @@ if __name__ == "__main__":
 			print("[!] The package \"" + package + "\" could not found in local apt cache. You may need to install it manually later after you've done update kali.")
 			print("    For the time being, re-run the script without https support.")
 			sys.exit(1)
+	"""
 
 	print("[+] Getting mirror list ...")
 	response = requests.get('https://http.kali.org/README.mirrorlist', headers=headers).text
